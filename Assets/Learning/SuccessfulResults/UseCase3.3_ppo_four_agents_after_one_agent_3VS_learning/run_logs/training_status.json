@@ -1,0 +1,71 @@
+{
+    "goal_reward": {
+        "lesson_num": 0
+    },
+    "collision_reward": {
+        "lesson_num": 0
+    },
+    "action_reward": {
+        "lesson_num": 0
+    },
+    "distance_max_reward": {
+        "lesson_num": 0
+    },
+    "rotation_offset": {
+        "lesson_num": 0
+    },
+    "spawn_in_front_of_spot": {
+        "lesson_num": 0
+    },
+    "reverse_factor": {
+        "lesson_num": 0
+    },
+    "parking_section_free_spaces": {
+        "lesson_num": 0
+    },
+    "max_rotation": {
+        "lesson_num": 0
+    },
+    "spawn_static_movement_cars": {
+        "lesson_num": 0
+    },
+    "ParkingCar": {
+        "checkpoints": [
+            {
+                "steps": 18999951,
+                "file_path": "results\\UseCase3.3_scene2_6_initFrom3.1_8\\ParkingCar\\ParkingCar-18999951.nn",
+                "reward": 0.9792651385068893,
+                "creation_time": 1616953250.4037492
+            },
+            {
+                "steps": 19499994,
+                "file_path": "results\\UseCase3.3_scene2_6_initFrom3.1_8\\ParkingCar\\ParkingCar-19499994.nn",
+                "reward": 0.49129527285695074,
+                "creation_time": 1616953757.7539804
+            },
+            {
+                "steps": 19999999,
+                "file_path": "results\\UseCase3.3_scene2_6_initFrom3.1_8\\ParkingCar\\ParkingCar-19999999.nn",
+                "reward": 0.11704476020838085,
+                "creation_time": 1616954258.4250968
+            },
+            {
+                "steps": 20000081,
+                "file_path": "results\\UseCase3.3_scene2_6_initFrom3.1_8\\ParkingCar\\ParkingCar-20000081.nn",
+                "reward": 0.06819065734744072,
+                "creation_time": 1616954262.2507336
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 20000081,
+            "file_path": "results\\UseCase3.3_scene2_6_initFrom3.1_8\\ParkingCar.nn",
+            "reward": 0.06819065734744072,
+            "creation_time": 1616954262.2507336
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.21.0",
+        "tensorflow_version": "2.4.1"
+    }
+}

@@ -1,0 +1,325 @@
+default_settings: null
+behaviors:
+  ParkingCar:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 0.0003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 640
+      num_layers: 4
+      vis_encode_type: simple
+      memory: null
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    init_path: null
+    keep_checkpoints: 4
+    checkpoint_interval: 500000
+    max_steps: 30000000
+    time_horizon: 128
+    summary_freq: 50000
+    threaded: true
+    self_play: null
+    behavioral_cloning: null
+    framework: tensorflow
+env_settings:
+  env_path: ..\autonomous-parking\Build\Win\MediumParkingScene2SingleAgent\autonomous-parking.exe
+  env_args: null
+  base_port: 5005
+  num_envs: 4
+  seed: -1
+engine_settings:
+  width: 512
+  height: 512
+  quality_level: 0
+  time_scale: 20.0
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: false
+environment_parameters:
+  goal_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1780
+          value: 1.0
+      name: goal_reward
+      completion_criteria: null
+  collision_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1781
+          value: -0.5
+      name: collision_reward
+      completion_criteria: null
+  action_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1782
+          value: -0.001
+      name: action_reward
+      completion_criteria: null
+  distance_reward_type:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1783
+          value: 1
+      name: distance_reward_type
+      completion_criteria: null
+  distance_max_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1784
+          value: 0.001
+      name: distance_max_reward
+      completion_criteria: null
+  rotation_offset:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1785
+          value: 0.0
+      name: rotation_offset
+      completion_criteria: null
+  spawn_static_movement_cars:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1786
+          value: 0
+      name: spawn_static_movement_cars
+      completion_criteria: null
+  reverse_factor:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1787
+          value: 0.1
+      name: reverse_factor
+      completion_criteria: null
+  parking_section_free_spaces:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1788
+          value: 8
+      name: Lesson1
+      completion_criteria:
+        behavior: ParkingCar
+        measure: progress
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 0.2
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1789
+          value: 4
+      name: Lesson2
+      completion_criteria:
+        behavior: ParkingCar
+        measure: progress
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 0.4
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1790
+          value: 2
+      name: Lesson3
+      completion_criteria: null
+  spawn_in_front_of_spot:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1791
+          value: 1
+      name: Lesson1
+      completion_criteria:
+        behavior: ParkingCar
+        measure: progress
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 0.05
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1792
+          value: 0.6
+      name: Lesson2
+      completion_criteria:
+        behavior: ParkingCar
+        measure: progress
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 0.5
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1793
+          value: 0.5
+      name: Lesson3
+      completion_criteria: null
+  max_rotation:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1794
+          value: 0.0
+      name: Lesson1
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1795
+          value: 10.0
+      name: Lesson2
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1796
+          value: 20.0
+      name: Lesson3
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1797
+          value: 30.0
+      name: Lesson4
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1798
+          value: 40.0
+      name: Lesson5
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1799
+          value: 50.0
+      name: Lesson6
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1800
+          value: 60.0
+      name: Lesson7
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1801
+          value: 70.0
+      name: Lesson8
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1802
+          value: 80.0
+      name: Lesson9
+      completion_criteria:
+        behavior: ParkingCar
+        measure: reward
+        min_lesson_length: 150
+        signal_smoothing: true
+        threshold: 1.0
+        require_reset: false
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 1803
+          value: 90.0
+      name: Lesson10
+      completion_criteria: null
+checkpoint_settings:
+  run_id: UseCase3.1_scene2_pt1_beta640_pokus4
+  initialize_from: null
+  load_model: false
+  resume: true
+  force: false
+  train_model: false
+  inference: false
+debug: false

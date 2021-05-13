@@ -1,0 +1,62 @@
+{
+    "goal_reward": {
+        "lesson_num": 0
+    },
+    "collision_reward": {
+        "lesson_num": 0
+    },
+    "action_reward": {
+        "lesson_num": 0
+    },
+    "distance_max_reward": {
+        "lesson_num": 0
+    },
+    "rotation_offset": {
+        "lesson_num": 0
+    },
+    "spawn_in_front_of_spot": {
+        "lesson_num": 1
+    },
+    "max_rotation": {
+        "lesson_num": 9
+    },
+    "ParkingCar": {
+        "checkpoints": [
+            {
+                "steps": 19304744,
+                "file_path": "results/UseCase2_ppo_4envs_pt6_UC1rw_eps02/ParkingCar/ParkingCar-19304744.nn",
+                "reward": 1.5169781185686588,
+                "creation_time": 1614632551.385393
+            },
+            {
+                "steps": 19499970,
+                "file_path": "results/UseCase2_ppo_4envs_pt6_UC1rw_eps02/ParkingCar/ParkingCar-19499970.nn",
+                "reward": 1.512157776966471,
+                "creation_time": 1614666273.3499887
+            },
+            {
+                "steps": 19999982,
+                "file_path": "results/UseCase2_ppo_4envs_pt6_UC1rw_eps02/ParkingCar/ParkingCar-19999982.nn",
+                "reward": 1.5206062853336335,
+                "creation_time": 1614666586.5123072
+            },
+            {
+                "steps": 20000075,
+                "file_path": "results/UseCase2_ppo_4envs_pt6_UC1rw_eps02/ParkingCar/ParkingCar-20000075.nn",
+                "reward": 1.5225026841257132,
+                "creation_time": 1614666586.8971038
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 20000075,
+            "file_path": "results/UseCase2_ppo_4envs_pt6_UC1rw_eps02/ParkingCar.nn",
+            "reward": 1.5225026841257132,
+            "creation_time": 1614666586.8971038
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.21.0",
+        "tensorflow_version": "2.4.1"
+    }
+}

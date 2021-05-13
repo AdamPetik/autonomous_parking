@@ -1,0 +1,62 @@
+{
+    "goal_reward": {
+        "lesson_num": 0
+    },
+    "collision_reward": {
+        "lesson_num": 0
+    },
+    "action_reward": {
+        "lesson_num": 0
+    },
+    "distance_max_reward": {
+        "lesson_num": 0
+    },
+    "rotation_offset": {
+        "lesson_num": 0
+    },
+    "spawn_in_front_of_spot": {
+        "lesson_num": 0
+    },
+    "max_rotation": {
+        "lesson_num": 9
+    },
+    "ParkingCar": {
+        "checkpoints": [
+            {
+                "steps": 8999988,
+                "file_path": "results\\UseCase1_ppo_2_v2_6_4envs_pt13_bsize_with10milsteps_95lambda_retry\\ParkingCar\\ParkingCar-8999988.nn",
+                "reward": 1.4939361330535676,
+                "creation_time": 1612893612.058796
+            },
+            {
+                "steps": 9499954,
+                "file_path": "results\\UseCase1_ppo_2_v2_6_4envs_pt13_bsize_with10milsteps_95lambda_retry\\ParkingCar\\ParkingCar-9499954.nn",
+                "reward": 1.4657599098152585,
+                "creation_time": 1612894045.0981739
+            },
+            {
+                "steps": 9999999,
+                "file_path": "results\\UseCase1_ppo_2_v2_6_4envs_pt13_bsize_with10milsteps_95lambda_retry\\ParkingCar\\ParkingCar-9999999.nn",
+                "reward": 1.5187465974262782,
+                "creation_time": 1612894478.1744132
+            },
+            {
+                "steps": 10000878,
+                "file_path": "results\\UseCase1_ppo_2_v2_6_4envs_pt13_bsize_with10milsteps_95lambda_retry\\ParkingCar\\ParkingCar-10000878.nn",
+                "reward": 1.520192047258965,
+                "creation_time": 1612894481.4974558
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10000878,
+            "file_path": "results\\UseCase1_ppo_2_v2_6_4envs_pt13_bsize_with10milsteps_95lambda_retry\\ParkingCar.nn",
+            "reward": 1.520192047258965,
+            "creation_time": 1612894481.4974558
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.21.0",
+        "tensorflow_version": "2.3.0"
+    }
+}

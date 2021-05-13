@@ -1,0 +1,147 @@
+default_settings: null
+behaviors:
+  ParkingCar:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 0.0003
+      beta: 0.005
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 512
+      num_layers: 4
+      vis_encode_type: simple
+      memory: null
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    init_path: null
+    keep_checkpoints: 4
+    checkpoint_interval: 500000
+    max_steps: 20000000
+    time_horizon: 128
+    summary_freq: 50000
+    threaded: true
+    self_play: null
+    behavioral_cloning: null
+    framework: tensorflow
+env_settings:
+  env_path: ..\..\Build\Win\MediumParkingScene2MultiAgent3stacked\autonomous-parking.exe
+  env_args: null
+  base_port: 5005
+  num_envs: 4
+  seed: -1
+engine_settings:
+  width: 512
+  height: 512
+  quality_level: 0
+  time_scale: 20.0
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: false
+environment_parameters:
+  goal_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8879
+          value: 1.0
+      name: goal_reward
+      completion_criteria: null
+  collision_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8880
+          value: -0.5
+      name: collision_reward
+      completion_criteria: null
+  action_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8881
+          value: -0.001
+      name: action_reward
+      completion_criteria: null
+  distance_max_reward:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8882
+          value: 0.001
+      name: distance_max_reward
+      completion_criteria: null
+  rotation_offset:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8883
+          value: 0.0
+      name: rotation_offset
+      completion_criteria: null
+  spawn_in_front_of_spot:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8884
+          value: 0.5
+      name: spawn_in_front_of_spot
+      completion_criteria: null
+  reverse_factor:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8885
+          value: 0.1
+      name: reverse_factor
+      completion_criteria: null
+  parking_section_free_spaces:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8886
+          value: 5
+      name: parking_section_free_spaces
+      completion_criteria: null
+  max_rotation:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8887
+          value: 90
+      name: max_rotation
+      completion_criteria: null
+  spawn_static_movement_cars:
+    curriculum:
+    - value:
+        sampler_type: constant
+        sampler_parameters:
+          seed: 8888
+          value: 0
+      name: spawn_static_movement_cars
+      completion_criteria: null
+checkpoint_settings:
+  run_id: UseCase3.3_scene2_6_initFrom3.1_8
+  initialize_from: null
+  load_model: false
+  resume: true
+  force: false
+  train_model: false
+  inference: false
+debug: false

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SimpleParkingScene.unity
+    guid: 4b694e26af3daed49807e3ff76a32576
+  - enabled: 0
+    path: Assets/Scenes/MediumParkingSceneSingleAgent.unity
+    guid: 26cc2fea00fcea048b61757399d9e91b
+  - enabled: 0
+    path: Assets/Scenes/MediumParkingSceneMultiAgent.unity
+    guid: c1aa834fb9d80ef4ebcc1ef27e3c85a9
+  m_configObjects: {}

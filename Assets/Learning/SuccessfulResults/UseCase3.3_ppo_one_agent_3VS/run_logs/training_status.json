@@ -1,0 +1,74 @@
+{
+    "goal_reward": {
+        "lesson_num": 0
+    },
+    "collision_reward": {
+        "lesson_num": 0
+    },
+    "action_reward": {
+        "lesson_num": 0
+    },
+    "distance_reward_type": {
+        "lesson_num": 0
+    },
+    "distance_max_reward": {
+        "lesson_num": 0
+    },
+    "rotation_offset": {
+        "lesson_num": 0
+    },
+    "spawn_static_movement_cars": {
+        "lesson_num": 0
+    },
+    "reverse_factor": {
+        "lesson_num": 0
+    },
+    "parking_section_free_spaces": {
+        "lesson_num": 2
+    },
+    "spawn_in_front_of_spot": {
+        "lesson_num": 2
+    },
+    "max_rotation": {
+        "lesson_num": 9
+    },
+    "ParkingCar": {
+        "checkpoints": [
+            {
+                "steps": 28999975,
+                "file_path": "results\\UseCase3.1_scene2_8_fromScratch_3stacked\\ParkingCar\\ParkingCar-28999975.nn",
+                "reward": 1.1286984753608704,
+                "creation_time": 1616841497.6025653
+            },
+            {
+                "steps": 29499967,
+                "file_path": "results\\UseCase3.1_scene2_8_fromScratch_3stacked\\ParkingCar\\ParkingCar-29499967.nn",
+                "reward": 1.0381884469139961,
+                "creation_time": 1616841866.76812
+            },
+            {
+                "steps": 29999999,
+                "file_path": "results\\UseCase3.1_scene2_8_fromScratch_3stacked\\ParkingCar\\ParkingCar-29999999.nn",
+                "reward": 1.2028597568472226,
+                "creation_time": 1616842230.9820342
+            },
+            {
+                "steps": 30001991,
+                "file_path": "results\\UseCase3.1_scene2_8_fromScratch_3stacked\\ParkingCar\\ParkingCar-30001991.nn",
+                "reward": 1.2761626731265674,
+                "creation_time": 1616842234.157055
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 30001991,
+            "file_path": "results\\UseCase3.1_scene2_8_fromScratch_3stacked\\ParkingCar.nn",
+            "reward": 1.2761626731265674,
+            "creation_time": 1616842234.157055
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.21.0",
+        "tensorflow_version": "2.4.1"
+    }
+}

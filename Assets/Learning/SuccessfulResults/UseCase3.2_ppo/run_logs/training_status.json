@@ -1,0 +1,74 @@
+{
+    "goal_reward": {
+        "lesson_num": 0
+    },
+    "collision_reward": {
+        "lesson_num": 0
+    },
+    "action_reward": {
+        "lesson_num": 0
+    },
+    "distance_reward_type": {
+        "lesson_num": 0
+    },
+    "distance_max_reward": {
+        "lesson_num": 0
+    },
+    "rotation_offset": {
+        "lesson_num": 0
+    },
+    "spawn_static_movement_cars": {
+        "lesson_num": 1
+    },
+    "reverse_factor": {
+        "lesson_num": 0
+    },
+    "parking_section_free_spaces": {
+        "lesson_num": 2
+    },
+    "spawn_in_front_of_spot": {
+        "lesson_num": 2
+    },
+    "max_rotation": {
+        "lesson_num": 9
+    },
+    "ParkingCar": {
+        "checkpoints": [
+            {
+                "steps": 28999878,
+                "file_path": "results\\UseCase3.2_scene2_6\\ParkingCar\\ParkingCar-28999878.nn",
+                "reward": 0.32292846217751503,
+                "creation_time": 1617779961.7871811
+            },
+            {
+                "steps": 29499968,
+                "file_path": "results\\UseCase3.2_scene2_6\\ParkingCar\\ParkingCar-29499968.nn",
+                "reward": 0.2907238056262334,
+                "creation_time": 1617780397.8082623
+            },
+            {
+                "steps": 29999960,
+                "file_path": "results\\UseCase3.2_scene2_6\\ParkingCar\\ParkingCar-29999960.nn",
+                "reward": 0.5022828296079473,
+                "creation_time": 1617780833.8526113
+            },
+            {
+                "steps": 30001462,
+                "file_path": "results\\UseCase3.2_scene2_6\\ParkingCar\\ParkingCar-30001462.nn",
+                "reward": 0.5206388758646475,
+                "creation_time": 1617780837.6487484
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 30001462,
+            "file_path": "results\\UseCase3.2_scene2_6\\ParkingCar.nn",
+            "reward": 0.5206388758646475,
+            "creation_time": 1617780837.6487484
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.21.0",
+        "tensorflow_version": "2.4.1"
+    }
+}

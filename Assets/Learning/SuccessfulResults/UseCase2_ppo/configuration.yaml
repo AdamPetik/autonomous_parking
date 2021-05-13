@@ -1,0 +1,139 @@
+behaviors: !!python/object/apply:mlagents.trainers.settings.DefaultTrainerDict
+  args: [!!python/name:mlagents.trainers.settings.TrainerSettings '']
+  dictitems:
+    ParkingCar:
+      behavioral_cloning: null
+      checkpoint_interval: 500000
+      framework: tensorflow
+      hyperparameters: {batch_size: 1024, beta: 0.001, buffer_size: 10240, epsilon: 0.3,
+        lambd: 0.9, learning_rate: 0.0003, learning_rate_schedule: linear, num_epoch: 3}
+      init_path: null
+      keep_checkpoints: 4
+      max_steps: 20000000
+      network_settings: {hidden_units: 512, memory: null, normalize: true, num_layers: 4,
+        vis_encode_type: simple}
+      reward_signals:
+        extrinsic: {gamma: 0.99, strength: 1.0}
+      self_play: null
+      summary_freq: 50000
+      threaded: true
+      time_horizon: 128
+      trainer_type: ppo
+checkpoint_settings: {force: false, inference: false, initialize_from: null, load_model: false,
+  resume: true, run_id: UseCase2_ppo_4envs_pt6_UC1rw_eps02, train_model: false}
+debug: false
+default_settings: null
+engine_settings: {capture_frame_rate: 60, height: 84, no_graphics: true, quality_level: 5,
+  target_frame_rate: -1, time_scale: 20.0, width: 84}
+env_settings: {base_port: 5005, env_args: null, env_path: /content/build/UseCase1h/UseCase1h.x86_64,
+  num_envs: 4, seed: -1}
+environment_parameters:
+  action_reward:
+    curriculum:
+    - completion_criteria: null
+      name: action_reward
+      value:
+        sampler_parameters: {seed: 3904, value: -0.001}
+        sampler_type: constant
+  collision_reward:
+    curriculum:
+    - completion_criteria: null
+      name: collision_reward
+      value:
+        sampler_parameters: {seed: 3903, value: -0.5}
+        sampler_type: constant
+  distance_max_reward:
+    curriculum:
+    - completion_criteria: null
+      name: distance_max_reward
+      value:
+        sampler_parameters: {seed: 3905, value: 0.001}
+        sampler_type: constant
+  goal_reward:
+    curriculum:
+    - completion_criteria: null
+      name: goal_reward
+      value:
+        sampler_parameters: {seed: 3902, value: 1.0}
+        sampler_type: constant
+  max_rotation:
+    curriculum:
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson1
+      value:
+        sampler_parameters: {seed: 3909, value: 0.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson2
+      value:
+        sampler_parameters: {seed: 3910, value: 10.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson3
+      value:
+        sampler_parameters: {seed: 3911, value: 20.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson4
+      value:
+        sampler_parameters: {seed: 3912, value: 30.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson5
+      value:
+        sampler_parameters: {seed: 3913, value: 40.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson6
+      value:
+        sampler_parameters: {seed: 3914, value: 50.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson7
+      value:
+        sampler_parameters: {seed: 3915, value: 60.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson8
+      value:
+        sampler_parameters: {seed: 3916, value: 70.0}
+        sampler_type: constant
+    - completion_criteria: {behavior: ParkingCar, measure: reward, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 1.0}
+      name: Lesson9
+      value:
+        sampler_parameters: {seed: 3917, value: 80.0}
+        sampler_type: constant
+    - completion_criteria: null
+      name: Lesson10
+      value:
+        sampler_parameters: {seed: 3918, value: 90.0}
+        sampler_type: constant
+  rotation_offset:
+    curriculum:
+    - completion_criteria: null
+      name: rotation_offset
+      value:
+        sampler_parameters: {seed: 3906, value: 0.0}
+        sampler_type: constant
+  spawn_in_front_of_spot:
+    curriculum:
+    - completion_criteria: {behavior: ParkingCar, measure: progress, min_lesson_length: 150,
+        require_reset: false, signal_smoothing: true, threshold: 0.039}
+      name: Lesson1
+      value:
+        sampler_parameters: {seed: 3907, value: 1}
+        sampler_type: constant
+    - completion_criteria: null
+      name: Lesson2
+      value:
+        sampler_parameters: {seed: 3908, value: 0.6}
+        sampler_type: constant
